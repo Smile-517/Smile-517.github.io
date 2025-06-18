@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuclear Core Manager</title>
+    <link rel="stylesheet" href="loading.css">
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <!-- CDN (Content Delivery Network)을 사용, importmap 설정 -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+          "simplex-noise": "https://cdn.esm.sh/simplex-noise@4.0.1"
+        }
+      }
+    </script>
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div id="loading-screen">
+      <div class="loading-content">
+        <div class="spinner"></div>
+        <div class="loading-text">Reactor Core: Igniting...</div>
+      </div>
+    </div>
+    <div id="app"></div>
+  </body>
+</html>
